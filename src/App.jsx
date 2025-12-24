@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 import useFullscreen from "./hooks/useFullscreen";
-import { Terminal } from "#windows/index";
+import { Terminal, Safari, Resume } from "#windows/index";
 import { Navbar, Welcome, Dock } from "#components/index.js";
 
 gsap.registerPlugin(Draggable);
@@ -12,10 +12,12 @@ const App = () => {
   return (
     <main>
       <Navbar />
-      <Welcome/>
-      <Dock/>
+      <Welcome />
+      <Dock />
 
-      <Terminal/>
+      <Terminal />
+      <Safari />
+      <Resume />
     </main>
   )
 }
