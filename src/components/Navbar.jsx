@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul>
           {navIcons.map(({id, img}) => (
             <li key={id}>
-              <img src={img} className="icon-hover"
+              <img src={img} className="icon-hover cursor-pointer hover:bg-black/15 hover:rounded-full"
               alt={`icon-${id}`} />
             </li>
           ))}

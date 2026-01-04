@@ -72,11 +72,14 @@ const Dock = () => {
         return;
     }
 
-    if(window.isOpen) {
-        closeWindow(app.id);
-    } else {
+    if (!window.isOpen) {
         openWindow(app.id);
+    } else if (window.isMinimized) {
+         useWindowStore.getState().restoreWindow(app.id);
+    } else {
+    closeWindow(app.id);
     }
+
 
     console.log(windows);
 

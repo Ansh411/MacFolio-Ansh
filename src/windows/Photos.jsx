@@ -49,7 +49,7 @@ const Photos = () => {
         </div>
     </div>
     </>
-  );
+  )
 };
 
 const PhotosWindow = WindowWrapper(Photos , "photos");

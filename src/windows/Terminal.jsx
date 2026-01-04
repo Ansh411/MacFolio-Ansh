@@ -1,9 +1,16 @@
 import { WindowControls } from "#components/index";
 import { techStack } from "#constants/index";
 import WindowWrapper from "#hoc/WindowWrapper";
+import useWindowStore from "#store/window";
 import { Check, Flag } from "lucide-react";
 
 const Terminal = () => {
+  
+  const isMaximized = useWindowStore(
+  (state) => state.windows.terminal.isMaximized
+);
+  
+    
   return (
     <>
     <div id="window-header">
@@ -11,9 +18,9 @@ const Terminal = () => {
         <h2>Tech Stack</h2>
     </div>
 
-    <div className="techstack">
+    <div className={`techstack ${isMaximized ? "text-lg p-10 mx-[50vh] mt-20" : "text-sm p-5"}`}>
         <p>
-           <span className="font-bold">@ansh % </span>
+           <span className={`${isMaximized ? "font-extrabold" : "font-bold"}`}>@ansh % </span>
            show tech stack 
         </p>
 
