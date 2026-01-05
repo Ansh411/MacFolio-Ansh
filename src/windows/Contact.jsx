@@ -1,11 +1,13 @@
 import { WindowControls } from "#components/index";
 import { socials } from "#constants/index";
 import WindowWrapper from "#hoc/WindowWrapper";
+import useThemeStore from "#store/theme";
 import useWindowStore from "#store/window";
 
 const Contact = () => {
   const { windows } = useWindowStore();
   const isMaximized = windows.contact?.isMaximized;
+  const isDark = useThemeStore((state) => state.theme === "dark");
 
   return (
     <>
@@ -39,24 +41,14 @@ const Contact = () => {
 
         {/* Title */}
         <h3
-          className={`
-            ${isMaximized
-              ? "text-2xl font-medium tracking-tight text-black"
-              : ""
-            }
-          `}
+        className={`${isMaximized ? `text-2xl font-medium tracking-tight ${isDark ? "text-neutral-100" : "text-zinc-900"}` : ""}`}
         >
           Let's Connect
         </h3>
 
         {/* Description */}
         <p
-          className={`
-            ${isMaximized
-              ? "max-w-xl text-base text-gray-600 leading-relaxed"
-              : ""
-            }
-          `}
+          className={`${isMaximized ? `max-w-xl text-base leading-relaxed ${isDark ? "text-neutral-300" : "text-gray-600"}` : ""}`}
         >
           Got an idea? A bug to squash? Or just wanna talk tech? I'm in.
         </p>

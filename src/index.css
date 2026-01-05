@@ -7,10 +7,17 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper_light.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+html {
+  background-image: url("/images/wallpaper_light.jpg");
+}
+
+html.dark {
+  background-image: url("/images/wallpaper_dark.jpg");
 }
 
 @theme {
@@ -116,6 +123,10 @@ body {
 
   #window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+  }
+
+  .dark #window-header {
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-zinc-900 border-b border-zinc-700 select-none text-sm text-gray-300;
   }
 
   #safari {
@@ -358,12 +369,19 @@ body {
     }
   }
 
+
   #imgfile {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       p {
         @apply font-bold text-[#5f6266];
+      }
+    }
+
+    .dark #window-header {
+      p {
+        @apply font-bold text-neutral-200;
       }
     }
 
@@ -393,4 +411,118 @@ body {
       }
     }
   }
+}
+
+#safari,
+#terminal,
+#contact,
+#photos,
+#resume,
+#finder,
+#txtfile,
+#imgfile {
+  @apply bg-white;
+}
+
+.dark #safari,
+.dark #terminal,
+.dark #contact,
+.dark #photos,
+.dark #resume,
+.dark #finder,
+.dark #txtfile,
+.dark #imgfile {
+  @apply bg-zinc-900 text-gray-200;
+}
+
+.sidebar {
+  @apply bg-gray-50 border-gray-200;
+}
+
+.dark .sidebar {
+  @apply bg-zinc-800 border-zinc-700 text-gray-300;
+}
+
+#dock .dock-container {
+  @apply bg-white/20;
+}
+
+.dark #dock .dock-container {
+  @apply bg-black/40;
+}
+
+.icon {
+  @apply hover:bg-gray-200;
+}
+
+.dark .icon {
+  @apply hover:bg-zinc-700;
+}
+
+/* Finder dark mode */
+.dark #finder {
+  @apply bg-zinc-900;
+}
+
+/* Right content panel */
+.dark #finder .content {
+  @apply bg-zinc-900;
+}
+
+/* Finder sidebar dark mode */
+.dark #finder .sidebar {
+  @apply bg-zinc-800 border-zinc-700;
+}
+
+/* Section title */
+.dark #finder .sidebar h3 {
+  @apply text-gray-500;
+}
+
+/* Active item (blue highlight like macOS) */
+.dark #finder .sidebar .active {
+  @apply bg-sky-500/15 text-sky-300;
+}
+
+/* Normal items */
+.dark #finder .sidebar .not-active {
+  @apply text-neutral-300 hover:bg-zinc-700;
+}
+
+nav {
+  @apply flex justify-between items-center
+  bg-white/60 dark:bg-black/40
+  backdrop-blur-2xl
+  p-2 px-5
+  select-none
+  border-b border-white/20 dark:border-white/10;
+}
+
+/* Navbar icons */
+nav img {
+  @apply transition-all;
+}
+
+.dark nav img {
+  filter: invert(1) brightness(1.2);
+}
+
+.icon-hover {
+  @apply p-1 rounded-md transition-all hover:bg-black/10 dark:hover:bg-white/10;
+}
+
+.dark #imgfile {
+  @apply bg-zinc-900;
+}
+
+.dark #txtfile {
+  @apply bg-zinc-900;
+}
+
+.dark #txtfile p {
+  @apply text-gray-300;
+}
+
+.dark #txtfile h3 {
+  @apply text-gray-100;
 }

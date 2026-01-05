@@ -19,7 +19,7 @@ const Image = () => {
       </div>
 
       <div
-        className={`flex justify-center items-center bg-white
+        className={`flex justify-center items-center bg-transparent
           ${isMaximized ? "p-10 h-[calc(100vh-48px)]" : "p-5"}
         `}
       >
@@ -36,3 +36,5 @@ const Image = () => {
 };
 
 export default WindowWrapper(Image, "imgfile");
+
+

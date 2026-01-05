@@ -1,14 +1,15 @@
 import { WindowControls } from "#components/index";
 import { techStack } from "#constants/index";
 import WindowWrapper from "#hoc/WindowWrapper";
+import useThemeStore from "#store/theme";
 import useWindowStore from "#store/window";
 import { Check, Flag } from "lucide-react";
 
 const Terminal = () => {
   
-  const isMaximized = useWindowStore(
-  (state) => state.windows.terminal.isMaximized
-);
+  const isMaximized = useWindowStore((state) => state.windows.terminal.isMaximized);
+  const theme = useThemeStore((state) => state.theme);
+  const isDark = theme === "dark";
   
     
   return (
@@ -46,8 +47,8 @@ const Terminal = () => {
             <p>
                 <Check size={20} /> 5 of 5 stacks loaded successfully (100%)
             </p>
-            <p className="text-black">
-                <Flag size={15} fill="black" />
+            <p className={`${isDark ? "text-neutral-100" : "text-gray-900"}`}>
+                <Flag size={15} color={`${isDark ? "white" : "black"}`} fill={`${isDark ? "white" : "black"}`} />
                 Render time : 5ms
             </p>
         </div>
