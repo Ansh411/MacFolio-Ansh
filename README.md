@@ -21,16 +21,19 @@ MacFolio is designed to showcase **advanced frontend engineering skills**, not j
 
 <div align="center">
       <img src = "./MacFolio Previews/Home.png" width ="400" /> 
-      <img src = "./MacFolio Previews/Finder.png" width ="400" /> 
+      <img src = "./MacFolio Previews/Home-Dark.png" width ="400" /> 
       <br/>
       <img src = "./MacFolio Previews/Gallery.png" width ="400" /> 
-      <img src = "./MacFolio Previews/Safari.png" width ="400" /> 
-      <br/> 
-      <img src = "./MacFolio Previews/Multiple Screens.png" width ="400" />
-      <img src = "./MacFolio Previews/Terminal.png" width ="400" /> 
+      <img src = "./MacFolio Previews/Finder-Dark.png" width ="400" /> 
       <br/> 
       <img src = "./MacFolio Previews/Resume.png" width ="400" />
+      <img src = "./MacFolio Previews/Terminal-Dark.png" width ="400" /> 
+      <br/> 
       <img src = "./MacFolio Previews/Contact.png" width ="400" /> 
+      <img src = "./MacFolio Previews/Safari-Dark.png" width ="400" />
+      <br/>
+      <img src = "./MacFolio Previews/Mutliple Screens.png" width ="400" /> 
+      <img src = "./MacFolio Previews/Mutliple Screens-Dark.png" width ="400" />
       <br/>
 </div>
 <br/>
