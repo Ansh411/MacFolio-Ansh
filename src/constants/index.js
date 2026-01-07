@@ -248,7 +248,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "netflix-gpt.com",
-          icon: "/images/safari.png",
+          icon: "/images/browser.png",
           kind: "file",
           fileType: "url",
           href: "https://gpt-flix-ansh-alpha.vercel.app/",
@@ -265,8 +265,8 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "GPT-Design.fig",
-          icon: "/images/plain.png",
+          name: "Netflix-GPT.git",
+          icon: "/images/github.png",
           kind: "file",
           fileType: "fig",
           href: "https://github.com/Ansh411/Netflix-GPT",
@@ -301,7 +301,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "devtube.com",
-          icon: "/images/safari.png",
+          icon: "/images/browser.png",
           kind: "file",
           fileType: "url",
           href: "https://dev-tube-gilt.vercel.app",
@@ -318,8 +318,8 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "DevTube-Design.fig",
-          icon: "/images/plain.png",
+          name: "DevTube.git",
+          icon: "/images/github.png",
           kind: "file",
           fileType: "fig",
           href: "https://github.com/Ansh411/DevTube",
@@ -354,7 +354,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "streamify.com",
-          icon: "/images/safari.png",
+          icon: "/images/browser.png",
           kind: "file",
           fileType: "url",
           href: "https://streamify-umhn.onrender.com",
@@ -371,8 +371,8 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Streamify-Design.fig",
-          icon: "/images/plain.png",
+          name: "Streamify.git",
+          icon: "/images/github.png",
           kind: "file",
           fileType: "fig",
           href: "https://github.com/Ansh411/Streamify---Real-Time-Video-Call-and-Chat-Web-App",
