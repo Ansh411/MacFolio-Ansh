@@ -44,7 +44,6 @@ html.dark {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -58,12 +57,12 @@ html.dark {
       @apply flex items-center gap-5 max-sm:hidden;
 
       p {
-        @apply text-sm cursor-pointer hover:underline transition-all;
+        @apply text-sm font-medium cursor-pointer hover:underline transition-all;
       }
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-gray-950;
     }
   }
 }
@@ -489,15 +488,6 @@ html.dark {
   @apply text-neutral-300 hover:bg-zinc-700;
 }
 
-nav {
-  @apply flex justify-between items-center
-  bg-white/60 dark:bg-black/40
-  backdrop-blur-2xl
-  p-2 px-5
-  select-none
-  border-b border-white/20 dark:border-white/10;
-}
-
 /* Navbar icons */
 nav img {
   @apply transition-all;
@@ -525,4 +515,44 @@ nav img {
 
 .dark #txtfile h3 {
   @apply text-gray-100;
+}
+
+nav p {
+  @apply text-gray-900;
+}
+
+.dark nav p {
+  @apply text-gray-200;
+}
+
+.dark #safari .blog {
+  @apply bg-zinc-900;
+}
+
+.dark #safari .search {
+  @apply bg-zinc-800 border-zinc-700;
+}
+
+.dark #safari .search input {
+  @apply bg-transparent text-gray-200 placeholder:text-gray-400;
+}
+
+.dark #safari .search {
+  @apply bg-zinc-800 border-zinc-700;
+}
+
+.dark #safari .search input {
+  @apply bg-transparent text-gray-200 placeholder:text-gray-400;
+}
+
+.dark #safari .blog-post img {
+  @apply brightness-90;
+}
+
+.dark #safari h3 {
+  @apply text-gray-200;
+}
+
+.dark #safari p {
+  @apply text-gray-400;
 }

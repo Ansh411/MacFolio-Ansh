@@ -17,7 +17,7 @@ const Photos = () => {
             <Search className="icon" />
         </div>
     </div>
-    <div className="flex w-full">
+    <div className="flex h-full w-full">
         <div className="sidebar">
             <h2>Photos</h2>
             <ul>

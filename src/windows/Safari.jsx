@@ -1,9 +1,14 @@
 import { WindowControls } from "#components/index";
 import { blogPosts } from "#constants/index";
 import WindowWrapper from "#hoc/WindowWrapper";
+import useWindowStore from "#store/window";
 import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf } from "lucide-react";
 
 const Safari = () => {
+
+  const { windows } = useWindowStore();
+  const isMaximized = windows.safari?.isMaximized;
+
   return (
     <>
     <div id="window-header">
@@ -33,10 +38,10 @@ const Safari = () => {
         </div>
     </div>
 
-    <div className="blog">
+    <div className={`blog ${isMaximized ? "mt-10" : ""}`}>
         <h2>My Developer Blog</h2>
 
-        <div className="space-y-8">
+        <div className={` ${isMaximized ? "space-y-16" : "space-y-8"}`}>
             {blogPosts.map(({ id, image, title, date, link }) => (
                 <div key={id} className="blog-post">
                     <div className="col-span-2">
