@@ -31,7 +31,7 @@ const Contact = () => {
       >
         {/* Avatar */}
         <img
-          src="/images/ansh.png"
+          src="/images/Ansh_Contact.jpg"
           alt="Ansh"
           className={`
             w-20 rounded-full

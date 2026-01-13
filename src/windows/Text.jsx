@@ -27,9 +27,7 @@ const Text = () => {
           <img
             src={image}
             alt={name}
-            className={`w-full rounded ${
-              isMaximized ? "max-h-[60vh]" : "max-h-[40vh]"
-            } object-contain`}
+            className="w-full rounded max-h-[40vh] object-contain"
           />
         )}
 
