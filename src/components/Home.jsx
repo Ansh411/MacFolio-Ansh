@@ -1,5 +1,6 @@
 import { locations } from "#constants/index";
 import useLocationStore from "#store/location";
+import useThemeStore from "#store/theme";
 import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
@@ -11,6 +12,9 @@ const Home = () => {
 
   const { setActiveLocation } = useLocationStore();
   const { openWindow } = useWindowStore();
+
+  const theme = useThemeStore((state) => state.theme);
+  const isDark = theme === "dark";
 
   const handleOpenProjectFinder = (project) => {
     setActiveLocation(project);
@@ -29,7 +33,7 @@ const Home = () => {
           className={clsx("group folder", project.windowPosition)}
           onClick={() => handleOpenProjectFinder(project)}
           >
-            <img src="/images/folder.png" alt={project.name}/>
+            <img src={`${isDark ? "/images/folder_dark.png" : "/images/folder_light.png"} `} alt={project.name}/>
             <p>{project.name}</p>
           </li>
         ))}
